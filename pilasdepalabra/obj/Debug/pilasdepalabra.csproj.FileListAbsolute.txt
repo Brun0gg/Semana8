@@ -1,0 +1,7 @@
+C:\Users\jhesl\source\repos\pilasdepalabra\pilasdepalabra\bin\Debug\pilasdepalabra.exe.config
+C:\Users\jhesl\source\repos\pilasdepalabra\pilasdepalabra\bin\Debug\pilasdepalabra.exe
+C:\Users\jhesl\source\repos\pilasdepalabra\pilasdepalabra\bin\Debug\pilasdepalabra.pdb
+C:\Users\jhesl\source\repos\pilasdepalabra\pilasdepalabra\obj\Debug\pilasdepalabra.csproj.AssemblyReference.cache
+C:\Users\jhesl\source\repos\pilasdepalabra\pilasdepalabra\obj\Debug\pilasdepalabra.csproj.CoreCompileInputs.cache
+C:\Users\jhesl\source\repos\pilasdepalabra\pilasdepalabra\obj\Debug\pilasdepalabra.exe
+C:\Users\jhesl\source\repos\pilasdepalabra\pilasdepalabra\obj\Debug\pilasdepalabra.pdb
