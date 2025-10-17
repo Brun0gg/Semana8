@@ -1,0 +1,8 @@
+C:\Users\bruno\source\repos\Ejer5Cola\Ejer5Cola\bin\Debug\Ejer5Cola.exe.config
+C:\Users\bruno\source\repos\Ejer5Cola\Ejer5Cola\bin\Debug\Ejer5Cola.exe
+C:\Users\bruno\source\repos\Ejer5Cola\Ejer5Cola\bin\Debug\Ejer5Cola.pdb
+C:\Users\bruno\source\repos\Ejer5Cola\Ejer5Cola\obj\Debug\Ejer5Cola.csproj.AssemblyReference.cache
+C:\Users\bruno\source\repos\Ejer5Cola\Ejer5Cola\obj\Debug\Ejer5Cola.csproj.CoreCompileInputs.cache
+C:\Users\bruno\source\repos\Ejer5Cola\Ejer5Cola\obj\Debug\Ejer5Cola.exe
+C:\Users\bruno\source\repos\Ejer5Cola\Ejer5Cola\obj\Debug\Ejer5Cola.pdb
+C:\Users\bruno\source\repos\Ejer5Cola\Ejer5Cola\obj\Debug\Ejer5Cola.exe.config
