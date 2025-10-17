@@ -10,7 +10,7 @@ namespace Ejer5Cola
     {
         static void Main(string[] args)
         {
-            
+            //Ejercicio 5 cola
             Queue<string> colaClientes = new Queue<string>();
 
             int opcion;
@@ -88,3 +88,4 @@ namespace Ejer5Cola
         }
     }
 }
+
