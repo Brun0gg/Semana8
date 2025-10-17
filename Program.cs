@@ -1,64 +1,90 @@
 ﻿using System;
 using System.Collections.Generic;
-class Program
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Ejer5Cola
 {
-    static void Main()
+    internal class Program
     {
-        Stack<string> pilaPalabras = new Stack<string>();
-
-        Console.WriteLine("Ingrese 5 palabras:");
-        for (int i = 1; i <= 5; i++)
+        static void Main(string[] args)
         {
-            Console.Write($"Palabra {i}: ");
-            string palabra = Console.ReadLine();
-            pilaPalabras.Push(palabra);
-        }
+            
+            Queue<string> colaClientes = new Queue<string>();
 
-        Console.WriteLine("\nPalabras en orden inverso (última ingresada, primera mostrada):");
-        foreach (string palabra in pilaPalabras)
-        {
-            Console.WriteLine(palabra);
-        }
-
-        if (pilaPalabras.Count == 0)
-        {
-            Console.WriteLine("\nLa pila está vacía.");
-        }
-        else
-        {
-            Console.WriteLine($"\nLa pila contiene {pilaPalabras.Count} palabras.");
-        }
-
-        Console.Write("\n¿Desea eliminar la última palabra ingresada? (s/n): ");
-        string respuesta = Console.ReadLine().ToLower();
-
-        if (respuesta == "s")
-        {
-            if (pilaPalabras.Count > 0)
+            int opcion;
+            do
             {
-                string eliminada = pilaPalabras.Pop();
-                Console.WriteLine($"Palabra eliminada: {eliminada}");
-            }
-            else
-            {
-                Console.WriteLine("No se puede eliminar, la pila está vacía.");
-            }
-        }
+                Console.WriteLine("\n--- COLA DE ATENCIÓN EN BANCO ---");
+                Console.WriteLine("1. Registrar cliente");
+                Console.WriteLine("2. Mostrar cola actual");
+                Console.WriteLine("3. Atender cliente");              
+                Console.WriteLine("4. Salir");
+                Console.Write("Seleccione una opción: ");
 
-        Console.WriteLine("\nPila final:");
-        if (pilaPalabras.Count == 0)
-        {
-            Console.WriteLine("La pila está vacía.");
-        }
-        else
-        {
-            foreach (string palabra in pilaPalabras)
-            {
-                Console.WriteLine(palabra);
-            }
-        }
+                opcion = int.Parse(Console.ReadLine());
+                Console.Clear();
 
-        Console.WriteLine("\nPrograma finalizado.");
+                switch (opcion)
+                {
+                    case 1:
+                        
+                        Console.Write("Ingrese el nombre del cliente: ");
+                        string cliente = Console.ReadLine();
+                        colaClientes.Enqueue(cliente);
+                        Console.WriteLine($"Cliente '{cliente}' agregado a la cola.");
+                        break;
+
+                    case 2:
+                        
+                        if (colaClientes.Count > 0)
+                        {
+                            Console.WriteLine("Clientes en espera:");
+                            foreach (string c in colaClientes)
+                                Console.WriteLine("- " + c);
+                        }
+                        else
+                        {
+                            Console.WriteLine("No hay clientes en la cola.");
+                        }
+                        break;
+
+                    case 3:
+                       
+                        if (colaClientes.Count > 0)
+                        {
+                            string atendido = colaClientes.Dequeue();
+                            Console.WriteLine($"Cliente atendido: {atendido}");
+                           
+                            if (colaClientes.Count > 0)
+                            {
+                                Console.WriteLine("\nClientes restantes:");
+                                foreach (string c in colaClientes)
+                                    Console.WriteLine("- " + c);
+                            }
+                            else
+                            {
+                                Console.WriteLine("\nTodos los clientes han sido atendidos.");
+                            }
+                        }
+                        else
+                        {
+                            Console.WriteLine("No hay clientes por atender.");
+                        }
+                        break;
+
+                    case 4:
+                        Console.WriteLine("Saliendo del programa...");
+
+                        break;                 
+
+                    default:
+                        Console.WriteLine("Opción no válida. Intente nuevamente.");
+                        break;
+                }
+
+            } while (opcion != 4);
+        }
     }
 }
-
